@@ -44,11 +44,11 @@ function sumOdds(numbers) {
  * Hint: Use string methods to make it case-insensitive
  */
 function characterCount(string, c) {
-  // let count = 0;
-  // for (character of string) {
-  //   if (character.toLowerCase === c) count++;
-  // }
-  // return count;
+  let count = 0;
+  for (const character of string) {
+    if (character.toLowerCase() === c) count++;
+  }
+  return count;
 }
 
 /**
@@ -68,7 +68,7 @@ function characterCount(string, c) {
  */
 function differences(numbers) {
   const diff = [];
-  for (let i = 1 < numbers.length; i++) {
+  for (let i = 1; i < numbers.length; i++) {
     diff.push(numbers[i] - numbers[i - 1]);
   }
   return diff;
@@ -91,7 +91,7 @@ function differences(numbers) {
  * largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> 545
  */
 function largestIncrement(numbers) {
-return Math.max(...differences(numbers));
+  return Math.max(...differences(numbers));
 }
 
 /**
@@ -106,9 +106,9 @@ return Math.max(...differences(numbers));
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
  */
 function afterX(numbers, x) {
-let index = numbers.findIndex((element) => element === x);
-const arrAfterX = numbers.slice(index + 1);
-return arrAfterX
+  let index = numbers.findIndex((element) => element === x);
+  const arrAfterX = numbers.slice(index + 1);
+  return arrAfterX;
 }
 
 /**
@@ -123,7 +123,7 @@ return arrAfterX
  * Hint: Use string method .toUpperCase()
  */
 function abbreviate(firstName, lastName) {
-return `${firstName[0].toUpperCase()}${lastName[0].toUpperCase()}`;
+  return `${firstName[0].toUpperCase()}${lastName[0].toUpperCase()}`;
 }
 
 /**
